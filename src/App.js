@@ -13,6 +13,7 @@ function App() {
   const [showNewQuiz, setShowNewQuiz] = useState(false);
   const [isQuizLoading, setIsQuizLoading] = useState(false);
 
+
   const handleCreateQuiz = () => {
     const url = `https://opentdb.com/api.php?amount=5&category=${category}&difficulty=${difficulty}&type=multiple`;
     setIsQuizLoading(true);
@@ -63,11 +64,11 @@ function App() {
     let resultClass = "";
 
     if (score <= 1) {
-      resultClass = "red"; // Red for 0-1 correct answers
+      resultClass = "red"; 
     } else if (score <= 3) {
-      resultClass = "yellow"; // Yellow for 2-3 correct answers
+      resultClass = "yellow"; 
     } else {
-      resultClass = "green"; // Green for 4-5 correct answers
+      resultClass = "green"; 
     }
 
     setAnswerDetail({ text: answerDetail, color: resultClass });
